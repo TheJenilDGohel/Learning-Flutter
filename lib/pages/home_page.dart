@@ -8,14 +8,13 @@ class HomePage extends StatelessWidget {
       appBar: AppBar(
         title: Text("This Is A Title"),
         shadowColor: Colors.black,
-        backgroundColor: Colors.purple,
       ),
       body: Center(
         child: Container(
-          child: Text("Hey YA !! $name"),
+          child: Text("Hey YA Bro !! $name"),
         ),
       ),
-      drawer: Drawer(backgroundColor: Colors.purpleAccent),
+      drawer: Drawer(),
     );
   }
 }
