@@ -1,0 +1,60 @@
+{
+    "Products": [
+        {
+            "itemId": 1,
+            "itemName": "iPhone 13 Pro",
+            "itemDesc": "A dramatically more powerful camera system. A display so responsive, every interaction feels new again. The world’s fastest smartphone chip. Exceptional durability. And a huge leap in battery life.",
+            "itemColor": "#505F4E",
+            "itemImage": "https://www.powerplanetonline.com/cdnassets/iphone_13_pro_max_verde_alpino_01_l.jpg",
+            "itemPrice": 124000
+        },
+        {
+            "itemId": 2,
+            "itemName": "iPhone 13 Pro",
+            "itemDesc": "A dramatically more powerful camera system. A display so responsive, every interaction feels new again. The world’s fastest smartphone chip. Exceptional durability. And a huge leap in battery life.",
+            "itemColor": "#505F4E",
+            "itemImage": "https://www.powerplanetonline.com/cdnassets/iphone_13_pro_max_verde_alpino_01_l.jpg",
+            "itemPrice": 124000
+        },
+        {
+            "itemId": 3,
+            "itemName": "iPhone 13 Pro",
+            "itemDesc": "A dramatically more powerful camera system. A display so responsive, every interaction feels new again. The world’s fastest smartphone chip. Exceptional durability. And a huge leap in battery life.",
+            "itemColor": "#505F4E",
+            "itemImage": "https://www.powerplanetonline.com/cdnassets/iphone_13_pro_max_verde_alpino_01_l.jpg",
+            "itemPrice": 124000
+        },
+        {
+            "itemId": 4,
+            "itemName": "iPhone 13 Pro",
+            "itemDesc": "A dramatically more powerful camera system. A display so responsive, every interaction feels new again. The world’s fastest smartphone chip. Exceptional durability. And a huge leap in battery life.",
+            "itemColor": "#505F4E",
+            "itemImage": "https://www.powerplanetonline.com/cdnassets/iphone_13_pro_max_verde_alpino_01_l.jpg",
+            "itemPrice": 124000
+        },
+        {
+            "itemId": 5,
+            "itemName": "iPhone 13 Pro",
+            "itemDesc": "A dramatically more powerful camera system. A display so responsive, every interaction feels new again. The world’s fastest smartphone chip. Exceptional durability. And a huge leap in battery life.",
+            "itemColor": "#505F4E",
+            "itemImage": "https://www.powerplanetonline.com/cdnassets/iphone_13_pro_max_verde_alpino_01_l.jpg",
+            "itemPrice": 124000
+        },
+        {
+            "itemId": 6,
+            "itemName": "iPhone 13 Pro",
+            "itemDesc": "A dramatically more powerful camera system. A display so responsive, every interaction feels new again. The world’s fastest smartphone chip. Exceptional durability. And a huge leap in battery life.",
+            "itemColor": "#505F4E",
+            "itemImage": "https://www.powerplanetonline.com/cdnassets/iphone_13_pro_max_verde_alpino_01_l.jpg",
+            "itemPrice": 124000
+        },
+        {
+            "itemId": 7,
+            "itemName": "iPhone 13 Pro",
+            "itemDesc": "A dramatically more powerful camera system. A display so responsive, every interaction feels new again. The world’s fastest smartphone chip. Exceptional durability. And a huge leap in battery life.",
+            "itemColor": "#505F4E",
+            "itemImage": "https://www.powerplanetonline.com/cdnassets/iphone_13_pro_max_verde_alpino_01_l.jpg",
+            "itemPrice": 124000
+        }
+    ]
+}
