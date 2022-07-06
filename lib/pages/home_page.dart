@@ -23,10 +23,11 @@ class _HomePageState extends State<HomePage> {
     final catalog_dataJson =
         await rootBundle.loadString("assets/files/catalog_data.json");
     final decodedData = jsonDecode(catalog_dataJson);
-
     var productData = decodedData["Products"];
 
-    print(productData);
+    CatalogModel.items =
+        List.from(productData).map<Item>((item) => Item.fromMap(item)).toList();
+    setState(() {});
   }
 
   @override
