@@ -14,23 +14,23 @@
             "itemDesc": "A dramatically more powerful camera system. A display so responsive, every interaction feels new again. The world’s fastest smartphone chip. Exceptional durability. And a huge leap in battery life.",
             "itemColor": "#505F4E",
             "itemImage": "https://www.powerplanetonline.com/cdnassets/iphone_13_pro_max_verde_alpino_01_l.jpg",
-            "itemPrice": 124000
+            "itemPrice": 100000
         },
         {
             "itemId": 3,
-            "itemName": "iPhone 12 Pro",
-            "itemDesc": "A dramatically more powerful camera system. A display so responsive, every interaction feels new again. The world’s fastest smartphone chip. Exceptional durability. And a huge leap in battery life.",
+            "itemName": "Macbook Pro",
+            "itemDesc": "The new M2 chip makes the 13‑inch MacBook Pro more capable than ever. The same compact design supports up to 20 hours of battery life1 and an active cooling system to sustain enhanced performance. Featuring a brilliant Retina display, a FaceTime HD camera and studio‑quality mics, it’s our most portable pro laptop.",
             "itemColor": "#505F4E",
-            "itemImage": "https://www.powerplanetonline.com/cdnassets/iphone_13_pro_max_verde_alpino_01_l.jpg",
+            "itemImage": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQqbYlQp3hOhAWjRVuU2mneULlofPrziT-dZEU5gjRk1JrT015AgZ9FSHTV7cY7xOqR_9E&usqp=CAU",
             "itemPrice": 124000
         },
         {
             "itemId": 4,
-            "itemName": "iPhone 12 Pro",
-            "itemDesc": "A dramatically more powerful camera system. A display so responsive, every interaction feels new again. The world’s fastest smartphone chip. Exceptional durability. And a huge leap in battery life.",
+            "itemName": "iWatch Series 7",
+            "itemDesc": "The larger display enhances the entire experience, making Apple Watch easier to use and read. Series 7 represents our biggest and brightest thinking yet.",
             "itemColor": "#505F4E",
-            "itemImage": "https://www.powerplanetonline.com/cdnassets/iphone_13_pro_max_verde_alpino_01_l.jpg",
-            "itemPrice": 124000
+            "itemImage": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQyxpMuBiyCwCnsEFg6sURlE5G-MF1XOje4xK1PRmL8e3Ec3P8-O-8DpYalJ5zGBRexM9E&usqp=CAU",
+            "itemPrice": 41900
         }
     ]
 }
