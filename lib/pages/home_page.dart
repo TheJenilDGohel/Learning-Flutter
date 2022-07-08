@@ -1,6 +1,8 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_application_1/themes/themes.dart';
+import 'package:flutter_application_1/utils/routes.dart';
 import 'dart:convert';
 import 'package:flutter_application_1/widgets/item_widget.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -40,6 +42,11 @@ class _HomePageState extends State<HomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: MyTheme.ghostWhite,
+      floatingActionButton: FloatingActionButton(
+        onPressed: (() => Navigator.pushNamed(context, MyRoutes.cartRoute)),
+        backgroundColor: MyTheme.pinegreen,
+        child: Icon(CupertinoIcons.cart),
+      ),
       body: SafeArea(
         bottom: false,
         child: Container(

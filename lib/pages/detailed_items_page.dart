@@ -12,7 +12,9 @@ class DetailedItemsPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(),
+      appBar: AppBar(
+        backgroundColor: Colors.transparent,
+      ),
       bottomNavigationBar: Container(
         color: MyTheme.ghostWhite,
         child: ButtonBar(
@@ -26,8 +28,8 @@ class DetailedItemsPage extends StatelessWidget {
                 shape: MaterialStateProperty.all(StadiumBorder()),
               ),
               onPressed: () {},
-              child: "Buy Now".text.lg.make(),
-            ).wh(100, 40),
+              child: "Add To Cart".text.bold.make(),
+            ).wh(120, 50),
           ],
         ).p20(),
       ),
