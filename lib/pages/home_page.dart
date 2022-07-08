@@ -112,20 +112,30 @@ class CatalogItem extends StatelessWidget {
                   .py12(),
               Text(
                 catalog.itemDesc,
-                maxLines: 6,
+                maxLines: 4,
                 overflow: TextOverflow.ellipsis,
                 style: context.captionStyle,
               ),
+              5.heightBox,
               ButtonBar(
+                alignment: MainAxisAlignment.spaceBetween,
                 children: [
                   "\₹ ${catalog.itemPrice}".text.make(),
+                  ElevatedButton(
+                      style: ButtonStyle(
+                        backgroundColor:
+                            MaterialStateProperty.all(MyTheme.bdazzeledBlue),
+                        shape: MaterialStateProperty.all(StadiumBorder()),
+                      ),
+                      onPressed: () {},
+                      child: "Buy Now".text.make()),
                 ],
               ),
             ]),
           ),
         ],
       ),
-    ).white.rounded.square(120).height(190).make().py8();
+    ).white.rounded.square(120).height(180).make().py8();
   }
 }
 
@@ -136,6 +146,6 @@ class CatalogImage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Image.network(image).box.rounded.white.make().p16().w32(context);
+    return Image.network(image).box.white.make().p4().w32(context);
   }
 }
