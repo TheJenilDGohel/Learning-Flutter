@@ -33,8 +33,19 @@ class _CartTotal extends StatelessWidget {
         children: [
           "\$999".text.xl4.red400.make(),
           ElevatedButton(
-            onPressed: () {},
-            child: "Buy Now".text.color(context.theme.buttonColor).white.make(),
+            style: ButtonStyle(
+              backgroundColor: MaterialStateProperty.all(
+                context.theme.buttonColor,
+              ),
+            ),
+            onPressed: () {
+              ScaffoldMessenger.of(context).showSnackBar(
+                SnackBar(
+                  content: "Feature is underconstruction yet.".text.make(),
+                ),
+              );
+            },
+            child: "Buy Now".text.white.white.make(),
           ).wh(110, 50),
         ],
       ).p16(),
@@ -60,7 +71,12 @@ class __CartListState extends State<_CartList> {
         ),
         title: "Item Count : 1".text.bold.make(),
         subtitle: "Item Price : \$500".text.semiBold.make(),
-        trailing: Icon(CupertinoIcons.cart_badge_minus),
+        trailing: IconButton(
+          icon: Icon(
+            CupertinoIcons.cart_badge_minus,
+          ),
+          onPressed: () {},
+        ),
       ),
     );
   }
