@@ -2,6 +2,12 @@
 import 'dart:convert';
 
 class CatalogModel {
+  static final catmodel = CatalogModel._internal();
+
+  CatalogModel._internal();
+
+  factory CatalogModel() => catmodel;
+
   static List<Item> items = [];
 
   //Get Item By ID
@@ -15,7 +21,7 @@ class CatalogModel {
 }
 
 class Item {
-  final num itemId;
+  final int itemId;
   final String itemName;
   final String itemDesc;
   final num itemPrice;
@@ -31,7 +37,7 @@ class Item {
   });
 
   Item copyWith({
-    num? itemId,
+    int? itemId,
     String? itemName,
     String? itemDesc,
     num? itemPrice,
@@ -61,7 +67,7 @@ class Item {
 
   factory Item.fromMap(Map<String, dynamic> map) {
     return Item(
-      itemId: map['itemId'] as num,
+      itemId: map['itemId'] as int,
       itemName: map['itemName'] as String,
       itemDesc: map['itemDesc'] as String,
       itemPrice: map['itemPrice'] as num,

@@ -2,11 +2,17 @@ import 'dart:ffi';
 import 'package:flutter_application_1/models/catalog.dart';
 
 class CartModel {
+  static final cartmodel = CartModel._internal();
+
+  CartModel._internal();
+
+  factory CartModel() => cartmodel;
+
   //catalog field
   late CatalogModel _catalog;
 
   //collection of itemIDs
-  List<dynamic> _itemIds = [];
+  List<int> _itemIds = [];
 
   //get catalog
   CatalogModel get catalog => _catalog;

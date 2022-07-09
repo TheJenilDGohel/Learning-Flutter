@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_application_1/models/cart.dart';
 import 'package:flutter_application_1/themes/themes.dart';
 import 'package:velocity_x/velocity_x.dart';
 
@@ -24,6 +25,7 @@ class CartPage extends StatelessWidget {
 }
 
 class _CartTotal extends StatelessWidget {
+  final _cart = CartModel();
   @override
   Widget build(BuildContext context) {
     return SizedBox(
@@ -31,7 +33,13 @@ class _CartTotal extends StatelessWidget {
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
-          "\$999".text.xl4.red400.make(),
+          Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              "Total Price :".text.xl2.color(context.accentColor).make(),
+              "\₹ ${_cart.totalprice}".text.xl3.red400.make(),
+            ],
+          ),
           ElevatedButton(
             style: ButtonStyle(
               backgroundColor: MaterialStateProperty.all(
@@ -46,7 +54,7 @@ class _CartTotal extends StatelessWidget {
               );
             },
             child: "Buy Now".text.white.white.make(),
-          ).wh(110, 50),
+          ).wh(110, 48),
         ],
       ).p16(),
     );
@@ -61,16 +69,18 @@ class _CartList extends StatefulWidget {
 }
 
 class __CartListState extends State<_CartList> {
+  final _cart = CartModel();
   @override
   Widget build(BuildContext context) {
     return ListView.builder(
-      itemCount: 10,
+      itemCount: _cart.items.length,
       itemBuilder: (BuildContext context, int index) => ListTile(
         leading: Icon(
           CupertinoIcons.check_mark_circled_solid,
         ),
-        title: "Item Count : 1".text.bold.make(),
-        subtitle: "Item Price : \$500".text.semiBold.make(),
+        title: _cart.items[index].itemName.text.bold.make(),
+        subtitle:
+            "\Price : ₹ ${_cart.items[index].itemPrice}".text.semiBold.make(),
         trailing: IconButton(
           icon: Icon(
             CupertinoIcons.cart_badge_minus,
