@@ -8,6 +8,13 @@ class CatalogImage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Image.network(image).box.white.make().p4().w32(context);
+    return Image.network(image)
+        .box
+        .rounded
+        .py12
+        .color(context.canvasColor)
+        .make()
+        .p8()
+        .w32(context);
   }
 }

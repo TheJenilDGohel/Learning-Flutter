@@ -50,14 +50,13 @@ class CatalogItem extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 catalog.itemName.text.semiBold
-                    .color(MyTheme.bdazzeledBlue)
+                    .color(context.accentColor)
                     .make()
                     .py12(),
                 catalog.itemDesc.text
                     .textStyle(context.captionStyle)
                     .maxLines(4)
                     .ellipsis
-                    .justify
                     .bold
                     .make(),
                 5.heightBox,
@@ -67,8 +66,8 @@ class CatalogItem extends StatelessWidget {
                     "\₹ ${catalog.itemPrice}".text.make(),
                     ElevatedButton(
                       style: ButtonStyle(
-                        backgroundColor:
-                            MaterialStateProperty.all(MyTheme.bdazzeledBlue),
+                        backgroundColor: MaterialStateProperty.all(
+                            context.theme.buttonColor),
                         shape: MaterialStateProperty.all(StadiumBorder()),
                       ),
                       onPressed: () {},
@@ -81,6 +80,6 @@ class CatalogItem extends StatelessWidget {
           ),
         ],
       ),
-    ).white.rounded.square(10).height(180).make().py8();
+    ).color(context.cardColor).rounded.square(10).height(180).make().py8();
   }
 }

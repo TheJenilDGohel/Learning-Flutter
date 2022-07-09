@@ -9,8 +9,13 @@ class CatalogHeader extends StatelessWidget {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        "Catalog App".text.xl5.bold.color(MyTheme.deepBlue).make(),
-        "Tranding Products".text.xl2.bold.color(MyTheme.pinegreen).make(),
+        "Catalog App".text.xl5.bold.color(context.accentColor).make(),
+        "Tranding Products"
+            .text
+            .xl2
+            .bold
+            .color(context.theme.accentColor)
+            .make(),
       ],
     );
   }

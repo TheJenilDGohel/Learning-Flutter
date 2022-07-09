@@ -12,28 +12,8 @@ class DetailedItemsPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        backgroundColor: Colors.transparent,
-      ),
-      bottomNavigationBar: Container(
-        color: MyTheme.ghostWhite,
-        child: ButtonBar(
-          alignment: MainAxisAlignment.spaceBetween,
-          children: [
-            "\₹ ${catalog.itemPrice}".text.xl2.red800.bold.make(),
-            ElevatedButton(
-              style: ButtonStyle(
-                backgroundColor:
-                    MaterialStateProperty.all(MyTheme.bdazzeledBlue),
-                shape: MaterialStateProperty.all(StadiumBorder()),
-              ),
-              onPressed: () {},
-              child: "Add To Cart".text.bold.make(),
-            ).wh(120, 50),
-          ],
-        ).p20(),
-      ),
-      backgroundColor: Colors.white,
+      appBar: AppBar(backgroundColor: Colors.transparent),
+      backgroundColor: context.canvasColor,
       body: SafeArea(
         bottom: false,
         child: Column(
@@ -48,11 +28,11 @@ class DetailedItemsPage extends StatelessWidget {
                 arcType: VxArcType.CONVEX,
                 edge: VxEdge.TOP,
                 child: Container(
-                  color: MyTheme.ghostWhite,
+                  color: context.cardColor,
                   child: Column(
                     children: [
                       catalog.itemName.text.xl3.bold
-                          .color(MyTheme.bdazzeledBlue)
+                          .color(context.accentColor)
                           .ellipsis
                           .make()
                           .py12(),
@@ -71,6 +51,24 @@ class DetailedItemsPage extends StatelessWidget {
             ),
           ],
         ),
+      ),
+      bottomNavigationBar: Container(
+        color: context.cardColor,
+        child: ButtonBar(
+          alignment: MainAxisAlignment.spaceBetween,
+          children: [
+            "\₹ ${catalog.itemPrice}".text.xl2.red500.bold.make(),
+            ElevatedButton(
+              style: ButtonStyle(
+                backgroundColor:
+                    MaterialStateProperty.all(context.theme.buttonColor),
+                shape: MaterialStateProperty.all(StadiumBorder()),
+              ),
+              onPressed: () {},
+              child: "Add To Cart".text.bold.make(),
+            ).wh(120, 50),
+          ],
+        ).p20(),
       ),
     );
   }
