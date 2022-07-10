@@ -9,7 +9,7 @@ import 'package:google_fonts/google_fonts.dart';
 import '../models/catalog.dart';
 import '../widgets/drawer.dart';
 import 'package:velocity_x/velocity_x.dart';
-import '../widgets/homeWidgets/catalogL_list.dart';
+import '../widgets/homeWidgets/catalog_list.dart';
 import '../widgets/homeWidgets/catalog_header.dart';
 
 class HomePage extends StatefulWidget {

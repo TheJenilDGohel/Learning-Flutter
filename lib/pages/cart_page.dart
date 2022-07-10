@@ -72,22 +72,29 @@ class __CartListState extends State<_CartList> {
   final _cart = CartModel();
   @override
   Widget build(BuildContext context) {
-    return ListView.builder(
-      itemCount: _cart.items.length,
-      itemBuilder: (BuildContext context, int index) => ListTile(
-        leading: Icon(
-          CupertinoIcons.check_mark_circled_solid,
-        ),
-        title: _cart.items[index].itemName.text.bold.make(),
-        subtitle:
-            "\Price : ₹ ${_cart.items[index].itemPrice}".text.semiBold.make(),
-        trailing: IconButton(
-          icon: Icon(
-            CupertinoIcons.cart_badge_minus,
-          ),
-          onPressed: () {},
-        ),
-      ),
-    );
+    return _cart.items.isEmpty
+        ? "Your Cart Is Empty !".text.xl2.makeCentered()
+        : ListView.builder(
+            itemCount: _cart.items.length,
+            itemBuilder: (BuildContext context, int index) => ListTile(
+              leading: Icon(
+                CupertinoIcons.check_mark_circled_solid,
+              ),
+              title: _cart.items[index].itemName.text.bold.make(),
+              subtitle: "\Price : ₹ ${_cart.items[index].itemPrice}"
+                  .text
+                  .semiBold
+                  .make(),
+              trailing: IconButton(
+                icon: Icon(
+                  CupertinoIcons.cart_badge_minus,
+                ),
+                onPressed: () {
+                  _cart.remove(_cart.items[index]);
+                  setState(() {});
+                },
+              ),
+            ),
+          );
   }
 }
