@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_application_1/themes/themes.dart';
+
 import 'package:flutter_application_1/widgets/homeWidgets/add_to_cart.dart';
 import 'package:velocity_x/velocity_x.dart';
 
@@ -58,7 +58,7 @@ class DetailedItemsPage extends StatelessWidget {
         child: ButtonBar(
           alignment: MainAxisAlignment.spaceBetween,
           children: [
-            "\₹ ${catalog.itemPrice}".text.xl2.red500.bold.make(),
+            "₹ ${catalog.itemPrice}".text.xl2.red500.bold.make(),
             AddToCart(
               catalog: catalog,
             ).wh(120, 50),

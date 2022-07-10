@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:velocity_x/velocity_x.dart';
 
-import '../../themes/themes.dart';
-
 class CatalogHeader extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -14,7 +12,7 @@ class CatalogHeader extends StatelessWidget {
             .text
             .xl2
             .bold
-            .color(context.theme.accentColor)
+            .color(context.theme.colorScheme.secondary)
             .make(),
       ],
     );

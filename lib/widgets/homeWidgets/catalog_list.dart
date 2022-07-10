@@ -1,14 +1,12 @@
 // ignore_for_file: public_member_api_docs, sort_constructors_first
-import 'package:flutter/cupertino.dart';
+
 import 'package:flutter/material.dart';
 import 'package:velocity_x/velocity_x.dart';
 
-import 'package:flutter_application_1/models/cart.dart';
 import 'package:flutter_application_1/pages/detailed_items_page.dart';
 
 import '../../models/catalog.dart';
-import '../../pages/home_page.dart';
-import '../../themes/themes.dart';
+
 import 'add_to_cart.dart';
 import 'catalog_image.dart';
 
@@ -69,7 +67,7 @@ class CatalogItem extends StatelessWidget {
                 ButtonBar(
                   alignment: MainAxisAlignment.spaceBetween,
                   children: [
-                    "\₹ ${catalog.itemPrice}".text.make(),
+                    "₹ ${catalog.itemPrice}".text.make(),
                     AddToCart(catalog: catalog),
                   ],
                 ),

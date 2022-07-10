@@ -1,7 +1,8 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_application_1/core/store.dart';
 import 'package:flutter_application_1/models/cart.dart';
-import 'package:flutter_application_1/themes/themes.dart';
+
 import 'package:velocity_x/velocity_x.dart';
 
 class CartPage extends StatelessWidget {
@@ -25,9 +26,9 @@ class CartPage extends StatelessWidget {
 }
 
 class _CartTotal extends StatelessWidget {
-  final _cart = CartModel();
   @override
   Widget build(BuildContext context) {
+    final _cart = (VxState.store as MyStore).cartModel;
     return SizedBox(
       height: 150,
       child: Row(
@@ -37,7 +38,7 @@ class _CartTotal extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               "Total Price :".text.xl2.color(context.accentColor).make(),
-              "\₹ ${_cart.totalprice}".text.xl3.red400.make(),
+              "₹ ${_cart.totalprice}".text.xl3.red400.make(),
             ],
           ),
           ElevatedButton(
@@ -61,17 +62,12 @@ class _CartTotal extends StatelessWidget {
   }
 }
 
-class _CartList extends StatefulWidget {
-  const _CartList({Key? key}) : super(key: key);
+class _CartList extends StatelessWidget {
+  _CartList({Key? key}) : super(key: key);
 
-  @override
-  State<_CartList> createState() => __CartListState();
-}
-
-class __CartListState extends State<_CartList> {
-  final _cart = CartModel();
   @override
   Widget build(BuildContext context) {
+    final _cart = (VxState.store as MyStore).cartModel;
     return _cart.items.isEmpty
         ? "Your Cart Is Empty !".text.xl2.makeCentered()
         : ListView.builder(
@@ -81,7 +77,7 @@ class __CartListState extends State<_CartList> {
                 CupertinoIcons.check_mark_circled_solid,
               ),
               title: _cart.items[index].itemName.text.bold.make(),
-              subtitle: "\Price : ₹ ${_cart.items[index].itemPrice}"
+              subtitle: "Price : ₹ ${_cart.items[index].itemPrice}"
                   .text
                   .semiBold
                   .make(),
@@ -91,7 +87,7 @@ class __CartListState extends State<_CartList> {
                 ),
                 onPressed: () {
                   _cart.remove(_cart.items[index]);
-                  setState(() {});
+                  // setState(() {});
                 },
               ),
             ),
